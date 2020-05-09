@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 368731966669555160}
   - component: {fileID: 368731966670554904}
   - component: {fileID: 368731966661492760}
+  - component: {fileID: 4404762359903918323}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -26,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368731966668298712}
-  m_LocalRotation: {x: -0.5294184, y: -0.468739, z: -0.46873894, w: 0.52941835}
+  m_LocalRotation: {x: -0.5294199, y: -0.4687372, z: -0.4687372, w: 0.5294199}
   m_LocalPosition: {x: 739.7428, y: 15.124, z: 784.229}
-  m_LocalScale: {x: 3.2826, y: 3.2826, z: 3.2826}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,3 +96,15 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &4404762359903918323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368731966668298712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37198a03dfad5be4b8b1a7afcb35d328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
