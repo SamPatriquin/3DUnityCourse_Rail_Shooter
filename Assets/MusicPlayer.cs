@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 public class MusicPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
-    private void Awake() {
-        DontDestroyOnLoad(this);
-    }
-    void Start() {
+    void Start()
+    {
         Invoke("LoadFirstScene", 5f);
     }
 
