@@ -44,14 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37198a03dfad5be4b8b1a7afcb35d328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 4
-  ySpeed: 4
+  xSpeed: 15
+  ySpeed: 15
   xRange: 5
-  yRange: 5
-  positionPitchFactor: -5
+  yRange: 3
+  positionPitchFactor: -10
   positionYawFactor: 5
-  dampeningPitch: -5
-  dampeningRoll: -20
+  dampeningPitch: -10
+  dampeningRoll: -10
 --- !u!1001 &4245787624189490221
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    [SerializeField] float xSpeed = 4f;
-    [SerializeField] float ySpeed = 4f;
+    [SerializeField] float xSpeed = 15f;
+    [SerializeField] float ySpeed = 15f;
 
     [SerializeField] float xRange = 5f;
-    [SerializeField] float yRange = 5f;
+    [SerializeField] float yRange = 3f;
 
-    float xOffset;
-    float yOffset;
+    float xThrow;
+    float yThrow;
 
-    [SerializeField] float positionPitchFactor = -5f;
+    [SerializeField] float positionPitchFactor = -10f;
     [SerializeField] float positionYawFactor = 5f;
    
 
-    [SerializeField] float dampeningPitch = -5f;
-    [SerializeField] float dampeningRoll = -20f;
+    [SerializeField] float dampeningPitch = -35f;
+    [SerializeField] float dampeningRoll = -40f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +31,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void ProcessTranslation() {
-        xOffset = Input.GetAxis("Horizontal") * xSpeed * Time.deltaTime;
-        yOffset = Input.GetAxis("Vertical") * ySpeed * Time.deltaTime;
+
+        xThrow = Input.GetAxis("Horizontal");
+        yThrow = Input.GetAxis("Vertical");
+
+        float xOffset = xThrow * xSpeed * Time.deltaTime;
+        float yOffset = yThrow * ySpeed * Time.deltaTime;
 
         float xMove = Mathf.Clamp(xOffset + transform.localPosition.x, -xRange, xRange);
         float yMove = Mathf.Clamp(yOffset + transform.localPosition.y, -yRange, yRange);
@@ -40,10 +44,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void ProcessRotation() {
-        float pitch = (positionPitchFactor * transform.localPosition.y + (yOffset * dampeningPitch)) - 90;
+        float pitch = positionPitchFactor * transform.localPosition.y + (yThrow* dampeningPitch);
         float yaw = positionYawFactor * transform.localPosition.x;
-        float roll = 90;
+        float roll = xThrow * dampeningRoll;
 
-        transform.localRotation = Quaternion.Euler(90, 0, 0);
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 }
