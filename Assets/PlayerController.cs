@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    [SerializeField] float xSpeed = 15f;
-    [SerializeField] float ySpeed = 15f;
+    [SerializeField] float xSpeed = 7f;
+    [SerializeField] float ySpeed = 7f;
 
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 3f;
@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float positionYawFactor = 5f;
    
 
-    [SerializeField] float dampeningPitch = -35f;
-    [SerializeField] float dampeningRoll = -40f;
+    [SerializeField] float dampeningPitch = -10f;
+    [SerializeField] float dampeningRoll = -10f;
 
     // Start is called before the first frame update
     void Start()
