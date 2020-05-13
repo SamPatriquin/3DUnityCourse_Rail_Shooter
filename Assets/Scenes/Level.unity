@@ -10105,60 +10105,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55217cfe92f01b948a4f5ac3df1254fc, type: 3}
---- !u!1001 &7868915167359451802
+--- !u!1001 &3793671561487810288
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1074994750746910, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
-      propertyPath: m_Name
-      value: Ship_03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 724.589
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 106.3
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: -361.817
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+    - target: {fileID: 6449276052092264824, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6454226969195138420, guid: e6785171f73af314ea9c77f7fc3a9d4c,
+        type: 3}
+      propertyPath: m_Name
+      value: Ship_03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: e6785171f73af314ea9c77f7fc3a9d4c, type: 3}
