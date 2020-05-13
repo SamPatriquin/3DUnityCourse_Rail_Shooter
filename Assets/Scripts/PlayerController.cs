@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+    [Header("Speed")]
     [SerializeField] float xSpeed = 7f;
     [SerializeField] float ySpeed = 7f;
 
+    [Header("Screen Bounds")]
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 3f;
 
     float xThrow;
     float yThrow;
 
+    [Header("Movement Tuning")]
     [SerializeField] float positionPitchFactor = -10f;
     [SerializeField] float positionYawFactor = 5f;
    
 
     [SerializeField] float dampeningPitch = -10f;
     [SerializeField] float dampeningRoll = -10f;
+
+    bool isControllsEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +31,14 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControllsEnabled) {
+            ProcessTranslation();
+            ProcessRotation();
+        }
+    }
+
+    private void onPlayerDeath() { //Called from CollisionHandler
+        isControllsEnabled = false;
     }
 
     private void ProcessTranslation() {
