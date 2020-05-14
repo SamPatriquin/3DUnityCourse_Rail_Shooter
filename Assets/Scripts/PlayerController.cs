@@ -1,8 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+
+    [SerializeField] GameObject[] guns;
+
     [Header("Speed")]
     [SerializeField] float xSpeed = 7f;
     [SerializeField] float ySpeed = 7f;
@@ -11,29 +15,28 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 3f;
 
-    float xThrow;
-    float yThrow;
-
     [Header("Movement Tuning")]
     [SerializeField] float positionPitchFactor = -10f;
     [SerializeField] float positionYawFactor = 5f;
-   
-
     [SerializeField] float dampeningPitch = -10f;
     [SerializeField] float dampeningRoll = -10f;
+
+    float xThrow;
+    float yThrow;
+ 
 
     bool isControllsEnabled = true;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
     }
 
     // Update is called once per frame
     void Update() {
         if (isControllsEnabled) {
-            ProcessTranslation();
-            ProcessRotation();
+            processTranslation();
+            processRotation();
+            processFiring();
         }
     }
 
@@ -41,7 +44,7 @@ public class PlayerController : MonoBehaviour {
         isControllsEnabled = false;
     }
 
-    private void ProcessTranslation() {
+    private void processTranslation() {
 
         xThrow = Input.GetAxis("Horizontal");
         yThrow = Input.GetAxis("Vertical");
@@ -54,11 +57,23 @@ public class PlayerController : MonoBehaviour {
         transform.localPosition = new Vector3(xMove, yMove, transform.localPosition.z);
     }
 
-    private void ProcessRotation() {
-        float pitch = positionPitchFactor * transform.localPosition.y + (yThrow* dampeningPitch);
+    private void processRotation() {
+        float pitch = positionPitchFactor * transform.localPosition.y + (yThrow * dampeningPitch);
         float yaw = positionYawFactor * transform.localPosition.x;
         float roll = xThrow * dampeningRoll;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void processFiring() {
+        if (Input.GetButton("Fire")) {
+            foreach (GameObject gun in guns) {
+                gun.SetActive(true);
+            }
+        } else {
+            foreach (GameObject gun in guns) {
+                gun.SetActive(false);
+            }
+        }
     }
 }
