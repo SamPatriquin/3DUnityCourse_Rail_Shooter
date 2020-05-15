@@ -68,13 +68,13 @@ public class PlayerController : MonoBehaviour {
     private void processFiring() {
         if (Input.GetButton("Fire")) {
             foreach (GameObject gun in guns) {
-                var emmisionModule = gun.GetComponent<ParticleSystem>().emission;
-                emmisionModule.enabled = true;
+                var emisionModule = gun.GetComponent<ParticleSystem>().emission;
+                emisionModule.enabled = true;
             }
         } else {
             foreach (GameObject gun in guns) {
-                var emmisionModule = gun.GetComponent<ParticleSystem>().emission;
-                emmisionModule.enabled = false;
+                var emisionModule = gun.GetComponent<ParticleSystem>().emission;
+                emisionModule.enabled = false;
             }
         }
     }
