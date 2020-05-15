@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &30038298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 177925510, guid: 55217cfe92f01b948a4f5ac3df1254fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1682268774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &73858582
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eaa16aebd7a27743b6f938cc099e81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorePerHit: 12
 --- !u!1 &247857021
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 4609148587087575316, guid: 6cd9029c252f06c4abd61640a4260b88, type: 3}
   place: {fileID: 1142011548}
+  scoreValue: 12
+  hits: 10
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +565,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &950249608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1631921636, guid: 55217cfe92f01b948a4f5ac3df1254fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1682268774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,16 +758,44 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 963194228}
     m_Modifications:
+    - target: {fileID: 177925510, guid: 55217cfe92f01b948a4f5ac3df1254fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631921636, guid: 55217cfe92f01b948a4f5ac3df1254fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1274750172751719443, guid: 55217cfe92f01b948a4f5ac3df1254fc,
         type: 3}
       propertyPath: m_Name
       value: PlayerShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274750172751719443, guid: 55217cfe92f01b948a4f5ac3df1254fc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1826461163954718910, guid: 55217cfe92f01b948a4f5ac3df1254fc,
         type: 3}
       propertyPath: deathEffect
       value: 
       objectReference: {fileID: 2811008862967175237}
+    - target: {fileID: 4036106668190165326, guid: 55217cfe92f01b948a4f5ac3df1254fc,
+        type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036106668190165326, guid: 55217cfe92f01b948a4f5ac3df1254fc,
+        type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 30038298}
+    - target: {fileID: 4036106668190165326, guid: 55217cfe92f01b948a4f5ac3df1254fc,
+        type: 3}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 950249608}
     - target: {fileID: 7099736333185082869, guid: 55217cfe92f01b948a4f5ac3df1254fc,
         type: 3}
       propertyPath: m_LocalPosition.x
